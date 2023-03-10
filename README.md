@@ -42,4 +42,10 @@ Data has been provided by [Kaggle](https://www.kaggle.com/datasets/ibriiee/video
 
 The data source (*at raw level*) is on csv format and located in [Kaggle](https://www.kaggle.com/datasets/ibriiee/video-games-sales-dataset-2022-updated-extra-feat). 
 
-For the data pipeline it's use **batch mode**, to run the pipelines periodically.
+The pipeline includes the next steps:
+- Terraform was used as IaC for the creation of the Bucket and BigQuery, as well as for the creation of a VM.
+- The initial data will be download from Kaggle Datasets.
+- The data will be stored in Google Cloud Storage as Data Lake.
+- The data will be moved from the data lake to a DWH.
+- The DWH data will be transformed and prepared for display on a dashboard.
+- The dashboard will be created to visualize the data.
