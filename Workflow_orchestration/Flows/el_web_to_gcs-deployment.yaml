@@ -3,9 +3,9 @@
 ###
 name: Video Games Sales Data to GCS
 description: "The Main EL function\n    "
-version: cb9ccff2c52e9cbe8c0974020169a874
+version: 2000882724ba8c1af2b2a73bab3ebe6c
 # The work queue that will handle this deployment's runs
-work_queue_name: default
+work_queue_name: test
 tags: []
 parameters: {}
 schedule:
@@ -13,6 +13,12 @@ schedule:
   timezone: null
   day_or: true
 infra_overrides: {}
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: EL Principal
+manifest_path: null
 infrastructure:
   type: process
   env: {}
@@ -21,14 +27,11 @@ infrastructure:
   command: null
   stream_output: true
   working_dir: null
+  _block_document_id: 9ea37568-b4ac-4d5f-be21-22c3a5d6f1a6
+  _block_document_name: anonymous-553d1f99-f583-49de-bd18-72bb1b2e9dc5
+  _is_anonymous: true
   block_type_slug: process
   _block_type_slug: process
-
-###
-### DO NOT EDIT BELOW THIS LINE
-###
-flow_name: EL Principal
-manifest_path: null
 storage: null
 path: "C:\\Users\\amarmol\\OneDrive - Comisi\xF3n Nacional de Bancos y Seguros (CNBS)\\\
   Documentos\\Proyectos\\de-zoomcamp\\Project\\Workflow_orchestration\\Flows"
