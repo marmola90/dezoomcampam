@@ -1,0 +1,44 @@
+###
+### A complete description of a Prefect Deployment for flow 'Principal'
+###
+name: Video Games Sales Data to BQ
+description: "Main Function\n    "
+version: d2a3bab66b8be604835ad8137db7f26f
+# The work queue that will handle this deployment's runs
+work_queue_name: test
+tags: []
+parameters: {}
+schedule:
+  cron: 0 1 1 * *
+  timezone: null
+  day_or: true
+infra_overrides: {}
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: Principal
+manifest_path: null
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  _block_document_id: 715e516e-36cb-4cb9-a60a-0f6d6eab12ae
+  _block_document_name: anonymous-baee853a-595d-448d-af35-5c590471a51c
+  _is_anonymous: true
+  block_type_slug: process
+  _block_type_slug: process
+storage: null
+path: "C:\\Users\\amarmol\\OneDrive - Comisi\xF3n Nacional de Bancos y Seguros (CNBS)\\\
+  Documentos\\Proyectos\\de-zoomcamp\\Project\\Workflow_orchestration\\Flows"
+entrypoint: load_to_bq.py:gcs_to_bq
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties: {}
+  required: null
+  definitions: null
