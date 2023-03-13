@@ -7,8 +7,14 @@ models:
       This Dataset provides up-to-date information on the sales performance and popularity of various video games worldwide. 
       The data includes the name, platform, year of release, genre, publisher, and sales in North America, Europe, Japan, and other regions. 
       Ready for dashboard.
-      
+
     columns:
+      - name: code_id
+        description: Primary key for this table
+        tests:
+          - unique:
+              severity: warn
+      
       - name: Name
         description: The name of the video game.
         tests:
