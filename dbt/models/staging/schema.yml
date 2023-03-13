@@ -1,0 +1,63 @@
+version: 2
+
+sources:
+  - name: staging
+    database: de-zoomcampam
+    schema: videogames
+
+    tables:
+      - name: videogames_data
+
+
+models:
+
+  - name: stg_videogames
+    description: >
+      This Dataset provides up-to-date information on the sales performance and popularity of various video games worldwide. 
+      The data includes the name, platform, year of release, genre, publisher, and sales in North America, Europe, Japan, and other regions. 
+      It also features scores and ratings from both critics and users, including average critic score, number of critics reviewed, 
+      average user score, number of users reviewed, developer, and rating. 
+      This comprehensive and essential dataset offers valuable insights into the global video game market and is a must-have tool for gamers, 
+      industry professionals, and market researchers.
+    columns:
+      - name: Name
+        description: The name of the video game.
+        tests:
+          - not_null:
+              severity: warn
+      - name: Platform
+        description: The platform on which the game was released, such as PlayStation, Xbox, Nintendo, etc.
+        tests:
+          - not_null:
+              severity: warn
+      - name: Year_of_Release
+        description: The year in which the game was released.
+      - name: Genre
+        description: The genre of the video game, such as action, adventure, sports, etc.
+      - name: Publisher
+        description: The company responsible for publishing the game.
+      - name: Na_Sales
+        description: The sales of the game in North America.
+        tests:
+          - not_null:
+              severity: warn
+      - name: EU_Sales
+        description: The sales of the game in Europe.
+        tests:
+          - not_null:
+              severity: warn
+      - name: JP_Sales
+        description: The sales of the game in Japan.
+        tests:
+          - not_null:
+              severity: warn
+      - name: Other_Sales
+        description: The sales of the game in other regions.
+        tests:
+          - not_null:
+              severity: warn
+      - name: Global_Sales
+        description: The sales of the game across the world.
+        tests:
+          - not_null:
+              severity: warn
