@@ -33,7 +33,7 @@ select
     CAST(Global_Sales as NUMERIC) as global_sales
 FROM vgdata
 
-{% if var('is_test_run', default=true) %}
+{% if var('is_test_run', default=false) %}
 
   limit 100
 
