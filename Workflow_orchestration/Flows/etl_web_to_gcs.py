@@ -13,7 +13,7 @@ def downloadData(dataset_kaggle:str)-> None:
     """
     print('Downloading file from Kaggle..........')
     kaggle.api.authenticate()
-    kaggle.api.dataset_download_files(dataset_kaggle, path=f'../../data/', unzip=True)
+    kaggle.api.dataset_download_files(dataset_kaggle, path=f'../data/', unzip=True)
     print('File download to destination Dir..........')
 
 #internal function call
@@ -26,7 +26,7 @@ def localPath(dataset_file:str)->Path:
     Returns:
         Path: return path of the file
     """
-    return Path(f'../../data/{dataset_file}').as_posix() 
+    return Path(f'../data/{dataset_file}').as_posix() 
 
 # internal funcion call
 def remotePath(dataset_file)->Path:

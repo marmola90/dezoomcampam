@@ -1,0 +1,12 @@
+config: {}
+vgSales:
+  outputs:
+    dev:
+      keyfile: /home/amarmol/.gc/de-zoomcampam-25644dc984d6.json
+      method: service-account
+      project: de-zoomcampam
+      dataset: dbt_videogames_prod
+      threads: 4
+      type: bigquery
+      location: us-central1
+  target: dev

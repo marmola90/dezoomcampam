@@ -27,8 +27,18 @@ Based on this, we will try to answer questions like:
 >4. What are the main game genres that are generating big sales?
 >5. Does the publisher have any impact on regional sales?
 
+# Technologies
+The technologies that were chosen to use are the following:
+- Cloud: GCP  
+    - Data Lake (DL): GCS
+    - Data Warehouse (DWH): BigQuery
+- Infrastructure as code (IaC): Terraform
+- Workflow Orchestation: Prefect
+- Transforming Data: DBT
+- Data Visualization: Looker Studio
+
 # Contents 
-`/Data` :  Data Source  
+`/Workflow orchestration/Data` :  Data Source  
 `/Dbt` : dbt files and folders  
 `/Images` : printscreens for Readme files  
 `/Infrastructure` : Terraform files  
@@ -38,7 +48,7 @@ Based on this, we will try to answer questions like:
 Data has been provided by [Kaggle](https://www.kaggle.com/datasets/ibriiee/video-games-sales-dataset-2022-updated-extra-feat).
 
 # Description of architecture
-![Architecture Pipeline](/Images/Pipeline%20Archictecture%20dark.png "Pipeline Architecture")  
+![Architecture Pipeline](Images/Pipeline%20Archictecture%20dark.png "Pipeline Architecture")  
 
 The data source (*at raw level*) is on csv format and located in [Kaggle](https://www.kaggle.com/datasets/ibriiee/video-games-sales-dataset-2022-updated-extra-feat). 
 
@@ -49,3 +59,4 @@ The pipeline includes the next steps:
 - The data will be moved from the data lake to a DWH.
 - The DWH data will be transformed and prepared for display on a dashboard.
 - The dashboard will be created to visualize the data.
+

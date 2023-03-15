@@ -3,7 +3,7 @@
 ###
 name: Video Games Sales Data to BQ
 description: "Main Function\n    "
-version: d2a3bab66b8be604835ad8137db7f26f
+version: 6a072a4646e0af5f302c6e6260dcef26
 # The work queue that will handle this deployment's runs
 work_queue_name: test
 tags: []
@@ -33,8 +33,7 @@ infrastructure:
   block_type_slug: process
   _block_type_slug: process
 storage: null
-path: "C:\\Users\\amarmol\\OneDrive - Comisi\xF3n Nacional de Bancos y Seguros (CNBS)\\\
-  Documentos\\Proyectos\\de-zoomcamp\\Project\\Workflow_orchestration\\Flows"
+path: /home/amarmol/dezoomcampam/Workflow_orchestration/Flows
 entrypoint: load_to_bq.py:gcs_to_bq
 parameter_openapi_schema:
   title: Parameters

@@ -16,8 +16,8 @@ def extract_from_gcs(datafile:str)->Path:
     """
     gcs_path=f"data/videogames/{datafile}"
     gcs_block = GcsBucket.load("zomm-gcs")
-    gcs_block.get_directory(from_path=gcs_path, local_path=f"../../")
-    return Path(f"../../{gcs_path}")
+    gcs_block.get_directory(from_path=gcs_path, local_path=f"../")
+    return Path(f"../{gcs_path}")
 
 @task(retries=3,log_prints=True)
 def fetchData(path:Path)->pd.DataFrame:
