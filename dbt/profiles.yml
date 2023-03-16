@@ -2,9 +2,9 @@ config: {}
 vgSales:
   outputs:
     dev:
-      keyfile: /home/amarmol/.gc/de-zoomcampam-25644dc984d6.json
+      keyfile: /home/amarmol/.gc/de-zoomcampam-25644dc984d6.json # replace this with the full path to your keyfile
       method: service-account
-      project: de-zoomcampam
+      project: de-zoomcampam # Replace this with your project id
       dataset: dbt_videogames_prod
       threads: 4
       type: bigquery

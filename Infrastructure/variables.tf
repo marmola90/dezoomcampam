@@ -1,15 +1,15 @@
 locals {
-  data_lake_bucket = "dtc_data_lake"
+  data_lake_bucket = "dtc_data_lake" #
 }
 
 variable "project" {
-  default = "de-zoomcampam"
+  default = "de-zoomcampam" #the name of your project
   type = string
 }
 
 variable "region" {
   description = "Region for GCP resources"
-  default = "us-central1"
+  default = "us-central1" #your preference region 
   type = string
 }
 
