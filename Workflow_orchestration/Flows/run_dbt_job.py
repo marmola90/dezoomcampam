@@ -4,9 +4,9 @@ from prefect import flow
 from prefect_dbt.cli.commands import DbtCliProfile, DbtCoreOperation
 
 @flow(log_prints=True)
-def dbt_run()->DbtCoreOperation:
+def dbt_run(dir:str)->DbtCoreOperation:
     """Run dbt commandas with CLI commands"""
-    dir='/home/amarmol/dezoomcampam/dbt/'
+    dir=f'{dir}dbt/'
     #dbt_path = os.path.realpath("../../dbt")
     #dbt_cli_profile = DbtCliProfile.load("profile-block")
     dbt_path=os.path.dirname(dir)
@@ -22,4 +22,5 @@ def dbt_run()->DbtCoreOperation:
     return dbt_op
     
 if __name__=='__main__':
-    dbt_run()
+    dir='/home/amarmol/dezoomcampam/'
+    dbt_run(dir)
