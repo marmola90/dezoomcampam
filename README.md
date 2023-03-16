@@ -184,6 +184,12 @@ If you have full access to dbt (a payed it opcion), run this command to create a
         prefect agent start -q 'default'
 ![Prefect Deployments](/Images/prefect-deployments.png "Deployments")
 
+For DBT Transform Job you should change the dir parameter for your current directory:
+     
+        /home/youruser/dezoomcampam/
+
+![Edit Parameter](/Images/edit_dir_prefect.png "Edit parameter")
+
 3. Steps for Looker Studio configurations:  
     - [Sign in in Look Studio](https://lookerstudio.google.com/navigation/reporting)
     - Choose New -> Data Source

@@ -3,7 +3,7 @@
 ###
 name: DBT Transform Job
 description: Run dbt commandas with CLI commands
-version: 243e9cdf74ef3e17caeb0e68e7c0a65f
+version: c1936af42c48e1c83d177d5d8adaf76a
 # The work queue that will handle this deployment's runs
 work_queue_name: test
 tags: []
@@ -38,6 +38,11 @@ entrypoint: run_dbt_job.py:dbt_run
 parameter_openapi_schema:
   title: Parameters
   type: object
-  properties: {}
-  required: null
+  properties:
+    dir:
+      title: dir
+      position: 0
+      type: string
+  required:
+  - dir
   definitions: null
